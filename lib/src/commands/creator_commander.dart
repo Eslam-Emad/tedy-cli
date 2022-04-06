@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:dart_cli/tedyCLI.dart';
 
 class CreatorCommander extends Commander{
-  final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" ];
+  final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" , "presentation/components" ,  "presentation/pages" ,  "presentation/routes" ,  "presentation/routes.dart" , ];
   @override
   run() {
   print('Creating Folder... ');
@@ -20,6 +20,7 @@ class CreatorCommander extends Commander{
   }
   _createFolder(folderName){
      final path = Directory.current.path;
+     print("this is current path : $path");
      final folderPath = getPlatformPath(path , folderName!);
      Directory(folderPath)
       .create()

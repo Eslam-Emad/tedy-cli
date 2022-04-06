@@ -4,9 +4,9 @@ import 'package:dart_cli/tedyCLI.dart';
 
 getPlatformPath(String path , String folderName){
   if (Platform.isWindows) {
-   return "..\\lib\\$folderName";
+   return "$path\\$folderName";
 } else if (Platform.isLinux || Platform.isMacOS ) {
-  return "../lib/$folderName";
+  return "$path/$folderName";
 }
 }
 
