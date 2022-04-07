@@ -1,4 +1,6 @@
 
+      const String LIB_FOLDER = 'lib';
+
    const String tedyCLI = '''
   ===================================================================
   |                             tedyCLI                             |

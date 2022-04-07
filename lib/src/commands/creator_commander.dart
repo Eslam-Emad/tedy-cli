@@ -4,11 +4,13 @@ import 'dart:io';
 import 'package:dart_cli/tedyCLI.dart';
 
 class CreatorCommander extends Commander{
-  final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" , "presentation/components" ,  "presentation/pages" ,  "presentation/routes" ,  "presentation/routes.dart" , ];
+  // TODO : create meta model for folders and files 
+  final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" , "presentation/components" ,  "presentation/pages" ,  "presentation/routes" , ];
   @override
   run() {
   print('Creating Folder... ');
   _createFolders();
+  writeToFile(path: "presentation/routes" , name: "routes.dart" , content: "class Routes{}");
  
   }
 
