@@ -1,16 +1,23 @@
 
 import 'dart:io';
 
+import 'package:dart_cli/src/constants/templates.dart';
 import 'package:dart_cli/tedyCLI.dart';
 
 class CreatorCommander extends Commander{
-  // TODO : create meta model for folders and files 
   final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" , "presentation/components" ,  "presentation/pages" ,  "presentation/routes" , ];
   @override
   run() {
   print('Creating Folder... ');
   _createFolders();
-  writeToFile(path: "presentation/routes" , name: "routes.dart" , content: "class Routes{}");
+  // route class
+  final tempHomeRoute = "static const String home = '/';";
+  final routeClass = class_template.replaceAll(className , "Routes").replaceAll(classBody, tempHomeRoute);
+  writeToFile(path: "presentation/routes" , name: "routes.dart" , content: routeClass);
+  // route generator class
+  writeToFile(path: "presentation/routes" , name: "route_generator.dart" , content: routeGeneratorClass);
+  // route home widget
+  writeToFile(path: "presentation/pages" , name: "home_page.dart" , content: homePageClass);
  
   }
 

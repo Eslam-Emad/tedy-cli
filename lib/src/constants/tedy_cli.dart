@@ -1,5 +1,7 @@
 
-      const String LIB_FOLDER = 'lib';
+      const String libFolder = 'lib';
+      const String className = "[CLASS_NAME]";
+      const String classBody = "[BODY]";
 
    const String tedyCLI = '''
   ===================================================================
