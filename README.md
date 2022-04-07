@@ -1,3 +1,2 @@
 # tedy CLI
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+tedy-cli is a simple cli written in dart  & code generator used with flutter.

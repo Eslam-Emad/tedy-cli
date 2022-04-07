@@ -1,6 +1,6 @@
 import 'package:dart_cli/tedyCLI.dart';
 
-const String class_template = ''' 
+const String classTemplate = ''' 
 class [CLASS_NAME]{
   [BODY]
 }
@@ -15,7 +15,7 @@ import '../pages/home_page.dart';
 import 'routes.dart';
 
 
-${class_template.replaceAll(className, "RouteGenerator").replaceAll(classBody, """
+${classTemplate.replaceAll(className, "RouteGenerator").replaceAll(classBody, """
  static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
 
@@ -49,7 +49,7 @@ String homePageClass = '''
 import 'package:flutter/material.dart';
 
 
-${class_template.replaceAll(className, "HomePage extends StatelessWidget").replaceAll(classBody,"""
+${classTemplate.replaceAll(className, "HomePage extends StatelessWidget").replaceAll(classBody,"""
   const HomePage({Key? key}) : super(key: key);
 
   @override

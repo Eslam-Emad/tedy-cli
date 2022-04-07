@@ -12,7 +12,7 @@ class CreatorCommander extends Commander{
   _createFolders();
   // route class
   final tempHomeRoute = "static const String home = '/';";
-  final routeClass = class_template.replaceAll(className , "Routes").replaceAll(classBody, tempHomeRoute);
+  final routeClass = classTemplate.replaceAll(className , "Routes").replaceAll(classBody, tempHomeRoute);
   writeToFile(path: "presentation/routes" , name: "routes.dart" , content: routeClass);
   // route generator class
   writeToFile(path: "presentation/routes" , name: "route_generator.dart" , content: routeGeneratorClass);
