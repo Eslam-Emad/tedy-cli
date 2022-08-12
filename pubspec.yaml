@@ -1,7 +1,8 @@
-name: dart_cli
-description: A sample command-line application.
+name: tedy_cli
+description: tedy-cli is a simple cli written in dart & code generator used with flutter.
 version: 1.0.0
-# homepage: https://www.example.com
+author: Islam Emad <Islam-Emad@outlook.com>
+homepage: https://github.com/Eslam-Emad/tedy-cli
 
 environment:
   sdk: '>=2.16.2 <3.0.0'
