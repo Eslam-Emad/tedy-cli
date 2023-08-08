@@ -6,6 +6,7 @@ import 'package:dart_cli/tedyCLI.dart';
 
 class CreatorCommander extends Commander{
   final List<String> folderNames =["application" , "infrastructure" ,"domain","presentation" , "presentation/components" ,  "presentation/pages" ,  "presentation/routes" , ];
+  // This is the main method that creates the necessary folders and files for the project.
   @override
   run() {
   print('Creating Folder... ');
@@ -21,12 +22,14 @@ class CreatorCommander extends Commander{
  
   }
 
+  // This method iterates over the folderNames list and creates a folder for each name.
   _createFolders(){
     for(int i = 0 ;i < folderNames.length ;i++){
       _createFolder(folderNames[i]);
     }
     
   }
+  // This method creates a single folder with the given name.
   _createFolder(folderName){
      final path = Directory.current.path;
      print("this is current path : $path");
